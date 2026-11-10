@@ -8,7 +8,10 @@
   </head>
   <body>
     <style>
- html, body {
+
+
+
+html, body {
   height: 100%;
 }
 
@@ -41,12 +44,11 @@ main {
   gap: 16px;
 }
 
-/* Distinct Cards & Sections */
 div, section, fieldset, form {
   box-sizing: border-box;
 }
 
-/* Give the Edit/Manage Game section a distinct high-contrast border and background */
+/* Distinct Bordered Card for Manage / Edit Section */
 form, .edit-section, div[id*="edit"], div[id*="manage"] {
   background-color: #151d18;
   border: 2px solid #ffb000;
@@ -57,7 +59,30 @@ form, .edit-section, div[id*="edit"], div[id*="manage"] {
   margin-bottom: 8px;
 }
 
-/* Standard headings */
+/* Borderized Cards for Installed Games List Items */
+.game-item, div[id*="game"], ul li, .installed-game-card {
+  background-color: #121a15;
+  border: 1px solid #00e5ff;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Style Game Titles and Links (Fixing the plain blue line look) */
+a, .game-title {
+  color: #00e5ff !important;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+a:hover {
+  color: #ffb000 !important;
+  text-decoration: underline;
+}
+
+/* Headings */
 h1, h2, h3, label, legend {
   color: #ffb000;
   text-transform: uppercase;
@@ -66,7 +91,7 @@ h1, h2, h3, label, legend {
   margin: 0 0 8px 0;
 }
 
-/* Styled Inputs & Select Menus (Using Dark Blue-Gray and Cyan/Amber contrast) */
+/* Inputs & Select Menus */
 input[type="text"], input[type="file"], select {
   width: 100%;
   background-color: #080c0a;
@@ -104,12 +129,17 @@ button:hover {
   box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
 }
 
-/* Checkbox Styling */
+/* Checkboxes */
 input[type="checkbox"] {
   accent-color: #ffb000;
   margin-right: 8px;
   transform: scale(1.2);
 }
+
+
+
+
+
     </style>
     <div id="loading">Loading...</div>
     <main id="main" style="display: none">
