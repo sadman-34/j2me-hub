@@ -8,16 +8,17 @@
   </head>
   <body>
     <style>
-  html, body {
+ html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  padding: 16px;
-  background-color: #0a0e0a;
-  color: #d4ffd9;
+  padding: 12px;
+  background-color: #0d110f;
+  color: #e0f2e9;
   font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
 }
 
 #loading {
@@ -27,38 +28,87 @@ body {
   align-items: center;
   inset: 0;
   font-size: 2em;
+  background-color: #0d110f;
+  color: #ffb000;
 }
 
 main {
   margin: auto;
   width: 100%;
-  max-width: 360px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-@media (min-width: 480px) {
-  main {
-    max-width: 480px;
-  }
+/* Distinct Cards & Sections */
+div, section, fieldset, form {
+  box-sizing: border-box;
 }
 
-/* CRT Terminal Theme Additions */
-h1, h2, h3, label {
-  color: #00ff66;
+/* Give the Edit/Manage Game section a distinct high-contrast border and background */
+form, .edit-section, div[id*="edit"], div[id*="manage"] {
+  background-color: #151d18;
+  border: 2px solid #ffb000;
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Standard headings */
+h1, h2, h3, label, legend {
+  color: #ffb000;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
 }
 
-button, input[type="file"], select {
-  background-color: #050a06;
-  color: #00ff66;
-  border: 1px solid #1b381e;
+/* Styled Inputs & Select Menus (Using Dark Blue-Gray and Cyan/Amber contrast) */
+input[type="text"], input[type="file"], select {
+  width: 100%;
+  background-color: #080c0a;
+  color: #00e5ff;
+  border: 1px solid #2a3d31;
+  padding: 8px;
   font-family: 'Courier New', Courier, monospace;
-  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+select:focus, input:focus {
+  border-color: #ffb000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 176, 0, 0.3);
+}
+
+/* Interactive Buttons */
+button, .btn {
+  background-color: #121c17;
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
+  padding: 7px 14px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
 }
 
 button:hover {
-  background-color: #00ff66;
-  color: #000;
+  background-color: #00e5ff;
+  color: #080c0a;
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  accent-color: #ffb000;
+  margin-right: 8px;
+  transform: scale(1.2);
 }
     </style>
     <div id="loading">Loading...</div>
