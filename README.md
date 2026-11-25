@@ -22,7 +22,7 @@ Version 1.5.0 - Developer: Tasmon Islam
 1. Go to [CloudPhone Developer Page](https://www.cloudfone.com/my).  
 2. Select **Add Widget**.  
 3. Paste this Start URL:  
-   `https://J2ME HUB.vercel.app`  
+   `https://sadman-34.github.io/j2me-hub/`  
 4. Upload icons if required (`icon.png` is included).  
 5. Save and refresh - **J2ME HUB** will appear on your CloudPhone. 
 
