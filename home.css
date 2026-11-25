@@ -1,0 +1,24 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#000;--fg:#fff;--ac:#1971e6;--dim:#9aa4b2;--bar:#111}
+[data-theme=light]{--bg:#f4f6fa;--fg:#111;--bar:#dde3ee;--dim:#556}
+[data-theme=green]{--bg:#031a0c;--fg:#d8ffe5;--ac:#1f9d55;--bar:#062a14;--dim:#7fb596}
+html,body{margin:0;width:100vw;height:var(--vh,100vh);overflow:hidden;background:var(--bg);color:var(--fg);font-family:Roboto,Arial,sans-serif;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+header{position:absolute;top:0;left:0;right:0;height:32px;background:var(--bar);text-align:center;line-height:32px;z-index:2}
+header img,header h1{display:inline-block;vertical-align:middle;margin:0}
+header h1{font-size:15px;margin-left:6px}
+#app{position:absolute;top:32px;bottom:38px;left:0;right:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+footer{position:absolute;bottom:0;left:0;right:0;height:38px;background:var(--bar);display:flex;z-index:2;font-size:14px;font-weight:bold}
+footer span{flex:1;display:flex;align-items:center;padding:0 10px}
+footer span+span{justify-content:flex-end}
+footer span:active{background:var(--ac);color:#fff}
+.item{min-height:44px;padding:6px 10px;display:flex;align-items:center;font-size:15px;border-bottom:1px solid rgba(128,128,128,.2)}
+.item img{width:28px;height:28px;margin-right:10px;image-rendering:pixelated;flex:none}
+.item .t{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;flex:1}
+.item small{display:block;font-size:11px;color:var(--dim)}
+.item.sel,.item:active{background:var(--ac);color:#fff}.item.sel small,.item:active small{color:#dfe8ff}
+.h{padding:6px 10px 2px;font-size:11px;color:var(--dim);text-transform:uppercase}
+.txt{padding:8px 10px;font-size:13px;line-height:1.4}.txt b{display:block;margin-top:6px}
+@media (max-width:128px){header{height:20px;line-height:20px}header img{width:12px;height:12px}header h1{font-size:11px}
+#app{top:20px;bottom:24px}footer{height:24px;font-size:10px}.item{min-height:30px;font-size:11px;padding:3px 4px}.item img{width:18px;height:18px;margin-right:5px}.txt{font-size:10px}}
+
+#app::after{content:'';display:block;height:24px}
